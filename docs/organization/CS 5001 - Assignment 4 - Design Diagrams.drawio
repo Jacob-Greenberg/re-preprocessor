@@ -1,9 +1,116 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.5 Chrome/134.0.6998.205 Electron/35.3.0 Safari/537.36" version="27.0.5">
   <diagram name="Page-1" id="8E5NQBIWLvRgGESPPvfP">
-    <mxGraphModel dx="1426" dy="840" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1665" dy="480" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-1" value="REPr" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="140" y="200" width="100" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-2" value="Binwalk" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="240" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-4" value="Agressive File Identifier" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="280" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-5" value="Entropy Viewer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="320" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CQqdl_JKLmUARrM8Nxty-9" target="CQqdl_JKLmUARrM8Nxty-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-9" value="Unknown file loaded" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="520" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CQqdl_JKLmUARrM8Nxty-10" target="CQqdl_JKLmUARrM8Nxty-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CQqdl_JKLmUARrM8Nxty-10" target="CQqdl_JKLmUARrM8Nxty-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-19" value="Unable to identify file" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="CQqdl_JKLmUARrM8Nxty-18">
+          <mxGeometry x="-0.0024" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-10" value="Loop over loaded identifiers" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="600" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CQqdl_JKLmUARrM8Nxty-11" target="CQqdl_JKLmUARrM8Nxty-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-11" value="Use highest confidence file" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="680" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CQqdl_JKLmUARrM8Nxty-14" target="CQqdl_JKLmUARrM8Nxty-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-23" value="No extractor for file&lt;br&gt;/&lt;br&gt;No extractors left" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="CQqdl_JKLmUARrM8Nxty-22">
+          <mxGeometry x="0.0054" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CQqdl_JKLmUARrM8Nxty-14" target="CQqdl_JKLmUARrM8Nxty-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="780" />
+              <mxPoint x="320" y="700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-25" value="Extraction failed, use &lt;br&gt;next highest confidence" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="CQqdl_JKLmUARrM8Nxty-24">
+          <mxGeometry x="-0.6662" relative="1" as="geometry">
+            <mxPoint x="13" y="-40" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CQqdl_JKLmUARrM8Nxty-14" target="CQqdl_JKLmUARrM8Nxty-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-14" value="Extract using first availible extractor" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="760" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-17" value="Display entropy information" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-120" y="600" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-21" value="Display entropy information" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-120" y="760" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CQqdl_JKLmUARrM8Nxty-26" target="CQqdl_JKLmUARrM8Nxty-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="860" />
+              <mxPoint x="400" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-29" value="File is still compressed" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="CQqdl_JKLmUARrM8Nxty-28">
+          <mxGeometry x="-0.7518" y="-1" relative="1" as="geometry">
+            <mxPoint x="61" y="-21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CQqdl_JKLmUARrM8Nxty-26" target="CQqdl_JKLmUARrM8Nxty-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-32" value="No longer compressed" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="CQqdl_JKLmUARrM8Nxty-31">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-26" value="Identify newly created file" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="840" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-30" value="Profit!" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="920" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-34" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="240" as="sourcePoint" />
+            <mxPoint x="280" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-35" value="Plugins can expose a way to identify a file and/or a way to extract it.&lt;div&gt;&lt;br&gt;&lt;div&gt;Identifier plugins return a confidence score to allow ML models or other less accurate identifiers to be used&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="200" width="260" height="90" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
