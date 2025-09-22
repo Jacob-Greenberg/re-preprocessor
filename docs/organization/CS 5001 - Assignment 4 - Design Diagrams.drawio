@@ -1,115 +1,220 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.5 Chrome/134.0.6998.205 Electron/35.3.0 Safari/537.36" version="27.0.5">
   <diagram name="Page-1" id="8E5NQBIWLvRgGESPPvfP">
-    <mxGraphModel dx="1665" dy="480" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="983" dy="1679" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-1" value="REPr" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
-          <mxGeometry x="140" y="200" width="100" height="180" as="geometry" />
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-5" value="File couldn&#39;t be identified" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CQqdl_JKLmUARrM8Nxty-1" target="mC1o3fJmZ-E8kfZc2I6A-3">
+          <mxGeometry x="0.6188" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-2" value="Binwalk" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="240" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-4" value="Agressive File Identifier" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="280" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-5" value="Entropy Viewer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="320" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CQqdl_JKLmUARrM8Nxty-9" target="CQqdl_JKLmUARrM8Nxty-10">
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CQqdl_JKLmUARrM8Nxty-1" target="mC1o3fJmZ-E8kfZc2I6A-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-9" value="Unknown file loaded" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="520" width="120" height="40" as="geometry" />
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-7" value="File identified" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="mC1o3fJmZ-E8kfZc2I6A-6">
+          <mxGeometry x="-0.7497" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CQqdl_JKLmUARrM8Nxty-10" target="CQqdl_JKLmUARrM8Nxty-11">
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-1" value="REPr" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="120" y="-160" width="100" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-2" value="Binwalk" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="140" y="-120" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-4" value="Agressive File Identifier" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="140" y="-80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-5" value="Entropy Viewer" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="140" y="-40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="CQqdl_JKLmUARrM8Nxty-9" target="CQqdl_JKLmUARrM8Nxty-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CQqdl_JKLmUARrM8Nxty-10" target="CQqdl_JKLmUARrM8Nxty-17">
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-9" value="Unknown file loaded" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="840" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="CQqdl_JKLmUARrM8Nxty-10" target="CQqdl_JKLmUARrM8Nxty-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-19" value="Unable to identify file" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="CQqdl_JKLmUARrM8Nxty-18">
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="CQqdl_JKLmUARrM8Nxty-10" target="CQqdl_JKLmUARrM8Nxty-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-19" value="Unable to identify file" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="CQqdl_JKLmUARrM8Nxty-18" vertex="1" connectable="0">
           <mxGeometry x="-0.0024" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-10" value="Loop over loaded identifiers" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="600" width="120" height="40" as="geometry" />
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-10" value="Loop over loaded identifiers" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="920" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CQqdl_JKLmUARrM8Nxty-11" target="CQqdl_JKLmUARrM8Nxty-14">
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="CQqdl_JKLmUARrM8Nxty-11" target="CQqdl_JKLmUARrM8Nxty-14" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-11" value="Use highest confidence file" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="680" width="120" height="40" as="geometry" />
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-11" value="Use highest confidence file" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="1000" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CQqdl_JKLmUARrM8Nxty-14" target="CQqdl_JKLmUARrM8Nxty-21">
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="CQqdl_JKLmUARrM8Nxty-14" target="CQqdl_JKLmUARrM8Nxty-21" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-23" value="No extractor for file&lt;br&gt;/&lt;br&gt;No extractors left" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="CQqdl_JKLmUARrM8Nxty-22">
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-23" value="No extractor for file&lt;br&gt;/&lt;br&gt;No extractors left" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="CQqdl_JKLmUARrM8Nxty-22" vertex="1" connectable="0">
           <mxGeometry x="0.0054" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CQqdl_JKLmUARrM8Nxty-14" target="CQqdl_JKLmUARrM8Nxty-11">
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="CQqdl_JKLmUARrM8Nxty-14" target="CQqdl_JKLmUARrM8Nxty-11" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="320" y="780" />
-              <mxPoint x="320" y="700" />
+              <mxPoint x="480" y="1100" />
+              <mxPoint x="480" y="1020" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-25" value="Extraction failed, use &lt;br&gt;next highest confidence" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="CQqdl_JKLmUARrM8Nxty-24">
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-25" value="Extraction failed, use &lt;br&gt;next highest confidence" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="CQqdl_JKLmUARrM8Nxty-24" vertex="1" connectable="0">
           <mxGeometry x="-0.6662" relative="1" as="geometry">
             <mxPoint x="13" y="-40" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CQqdl_JKLmUARrM8Nxty-14" target="CQqdl_JKLmUARrM8Nxty-26">
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="CQqdl_JKLmUARrM8Nxty-14" target="CQqdl_JKLmUARrM8Nxty-26" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-14" value="Extract using first availible extractor" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="760" width="120" height="40" as="geometry" />
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-14" value="Extract using first availible extractor" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="1080" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-17" value="Display entropy information" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-120" y="600" width="120" height="40" as="geometry" />
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-17" value="Display entropy information" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="920" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-21" value="Display entropy information" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-120" y="760" width="120" height="40" as="geometry" />
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-21" value="Display entropy information" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="1080" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CQqdl_JKLmUARrM8Nxty-26" target="CQqdl_JKLmUARrM8Nxty-10">
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="CQqdl_JKLmUARrM8Nxty-26" target="CQqdl_JKLmUARrM8Nxty-10" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="400" y="860" />
-              <mxPoint x="400" y="620" />
+              <mxPoint x="560" y="1180" />
+              <mxPoint x="560" y="940" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-29" value="File is still compressed" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="CQqdl_JKLmUARrM8Nxty-28">
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-29" value="File is still compressed" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="CQqdl_JKLmUARrM8Nxty-28" vertex="1" connectable="0">
           <mxGeometry x="-0.7518" y="-1" relative="1" as="geometry">
             <mxPoint x="61" y="-21" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CQqdl_JKLmUARrM8Nxty-26" target="CQqdl_JKLmUARrM8Nxty-30">
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="CQqdl_JKLmUARrM8Nxty-26" target="CQqdl_JKLmUARrM8Nxty-30" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-32" value="No longer compressed" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="CQqdl_JKLmUARrM8Nxty-31">
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-32" value="No longer compressed" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="CQqdl_JKLmUARrM8Nxty-31" vertex="1" connectable="0">
           <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-26" value="Identify newly created file" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="840" width="120" height="40" as="geometry" />
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-26" value="Identify newly created file" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="1160" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-30" value="Profit!" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="920" width="120" height="40" as="geometry" />
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-30" value="File Decompressed&lt;br&gt;(Profit!)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="1240" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-34" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-34" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="370" y="240" as="sourcePoint" />
-            <mxPoint x="280" y="260" as="targetPoint" />
+            <mxPoint x="350" y="-120" as="sourcePoint" />
+            <mxPoint x="260" y="-100" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQqdl_JKLmUARrM8Nxty-35" value="Plugins can expose a way to identify a file and/or a way to extract it.&lt;div&gt;&lt;br&gt;&lt;div&gt;Identifier plugins return a confidence score to allow ML models or other less accurate identifiers to be used&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="340" y="200" width="260" height="90" as="geometry" />
+        <mxCell id="CQqdl_JKLmUARrM8Nxty-35" value="Plugins can expose a way to identify a file and/or a way to extract it.&lt;div&gt;&lt;br&gt;&lt;div&gt;Identifier plugins return a confidence score to allow ML models or other less accurate identifiers to be used&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="-160" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mC1o3fJmZ-E8kfZc2I6A-2" target="CQqdl_JKLmUARrM8Nxty-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="-160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-2" value="Unknown file loaded" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="-240" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-3" value="Display entropy information" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-4" value="File Decompressed" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-20" value="File couldn&#39;t be identified" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mC1o3fJmZ-E8kfZc2I6A-23" target="mC1o3fJmZ-E8kfZc2I6A-29">
+          <mxGeometry x="0.6188" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mC1o3fJmZ-E8kfZc2I6A-23" target="mC1o3fJmZ-E8kfZc2I6A-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-22" value="File identified" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="mC1o3fJmZ-E8kfZc2I6A-21">
+          <mxGeometry x="-0.7497" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-23" value="REPr" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="120" y="320" width="100" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-24" value="Binwalk" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="360" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-25" value="Agressive File Identifier" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="400" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-26" value="Entropy Viewer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="440" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mC1o3fJmZ-E8kfZc2I6A-28" target="mC1o3fJmZ-E8kfZc2I6A-23">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-28" value="Unknown file loaded" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="240" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-29" value="Display entropy information" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="560" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-30" value="File Decompressed" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="560" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-31" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="300" width="150" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-32" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="mC1o3fJmZ-E8kfZc2I6A-24" target="mC1o3fJmZ-E8kfZc2I6A-31">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="290" as="sourcePoint" />
+            <mxPoint x="310" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-33" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mC1o3fJmZ-E8kfZc2I6A-24" target="mC1o3fJmZ-E8kfZc2I6A-31">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="340" as="sourcePoint" />
+            <mxPoint x="320" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="mC1o3fJmZ-E8kfZc2I6A-34" target="mC1o3fJmZ-E8kfZc2I6A-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-34" value="File Provided&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; text-wrap-mode: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22File%20couldn&#39;t%20be%20identified%22%20style%3D%22edgeStyle%3DorthogonalEdgeStyle%3Brounded%3D0%3BorthogonalLoop%3D1%3BjettySize%3Dauto%3Bhtml%3D1%3BexitX%3D0.25%3BexitY%3D1%3BexitDx%3D0%3BexitDy%3D0%3BentryX%3D0.5%3BentryY%3D0%3BentryDx%3D0%3BentryDy%3D0%3B%22%20edge%3D%221%22%20source%3D%225%22%20target%3D%2211%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%220.6188%22%20y%3D%2210%22%20relative%3D%221%22%20as%3D%22geometry%22%3E%3CmxPoint%20as%3D%22offset%22%2F%3E%3C%2FmxGeometry%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%223%22%20style%3D%22edgeStyle%3DorthogonalEdgeStyle%3Brounded%3D0%3BorthogonalLoop%3D1%3BjettySize%3Dauto%3Bhtml%3D1%3BexitX%3D0.75%3BexitY%3D1%3BexitDx%3D0%3BexitDy%3D0%3BentryX%3D0.5%3BentryY%3D0%3BentryDx%3D0%3BentryDy%3D0%3B%22%20edge%3D%221%22%20source%3D%225%22%20target%3D%2212%22%20parent%3D%221%22%3E%3CmxGeometry%20relative%3D%221%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%224%22%20value%3D%22File%20identified%22%20style%3D%22edgeLabel%3Bhtml%3D1%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3Bresizable%3D0%3Bpoints%3D%5B%5D%3B%22%20vertex%3D%221%22%20connectable%3D%220%22%20parent%3D%223%22%3E%3CmxGeometry%20x%3D%22-0.7497%22%20relative%3D%221%22%20as%3D%22geometry%22%3E%3CmxPoint%20as%3D%22offset%22%2F%3E%3C%2FmxGeometry%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%225%22%20value%3D%22REPr%22%20style%3D%22rounded%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BverticalAlign%3Dtop%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22120%22%20y%3D%22-160%22%20width%3D%22100%22%20height%3D%22180%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%226%22%20value%3D%22Binwalk%22%20style%3D%22rounded%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22140%22%20y%3D%22-120%22%20width%3D%22120%22%20height%3D%2240%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%227%22%20value%3D%22Agressive%20File%20Identifier%22%20style%3D%22rounded%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22140%22%20y%3D%22-80%22%20width%3D%22120%22%20height%3D%2240%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%228%22%20value%3D%22Entropy%20Viewer%22%20style%3D%22rounded%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22140%22%20y%3D%22-40%22%20width%3D%22120%22%20height%3D%2240%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%229%22%20style%3D%22edgeStyle%3DorthogonalEdgeStyle%3Brounded%3D0%3BorthogonalLoop%3D1%3BjettySize%3Dauto%3Bhtml%3D1%3BentryX%3D0.5%3BentryY%3D0%3BentryDx%3D0%3BentryDy%3D0%3B%22%20edge%3D%221%22%20source%3D%2210%22%20target%3D%225%22%20parent%3D%221%22%3E%3CmxGeometry%20relative%3D%221%22%20as%3D%22geometry%22%3E%3CmxPoint%20x%3D%22160%22%20y%3D%22-160%22%20as%3D%22targetPoint%22%2F%3E%3C%2FmxGeometry%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2210%22%20value%3D%22Unknown%20file%20loaded%22%20style%3D%22rounded%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22110%22%20y%3D%22-240%22%20width%3D%22120%22%20height%3D%2240%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2211%22%20value%3D%22Display%20entropy%20information%22%20style%3D%22rounded%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%2240%22%20y%3D%2280%22%20width%3D%22120%22%20height%3D%2240%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2212%22%20value%3D%22File%20Decompressed%22%20style%3D%22rounded%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22180%22%20y%3D%2280%22%20width%3D%22120%22%20height%3D%2240%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="310" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="mC1o3fJmZ-E8kfZc2I6A-35" target="mC1o3fJmZ-E8kfZc2I6A-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-35" value="Compares Header" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="370" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-37" value="Report Identification Confidence" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="430" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-39" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;D0: Basic Inputs and Outputs&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry y="-280" width="340" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-40" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;D1: Plugin Operations&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry y="190" width="340" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mC1o3fJmZ-E8kfZc2I6A-41" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;D2: Detailed System Operation&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry y="800" width="340" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
