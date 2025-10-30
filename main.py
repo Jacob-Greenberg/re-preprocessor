@@ -27,16 +27,30 @@ def attempt_identify(identifiers: dict,
     else:
         for identifier_name, info in identifiers.items():
             identifier_class = getattr(import_module(info['module']), info['attribute'])()
-            confidence = identifier_class.identify_file(in_file_path)
-            confidence_values[identifier_name] = confidence
+            confidence, types = identifier_class.identify_file(in_file_path)
+            confidence_values[identifier_name] = confidence, types
 
             if confidence_threshold is not None and confidence >= confidence_threshold:
                 break
 
     return confidence_values
 
-def attempt_extract(confidence: dict, in_file_path: str, out_file_path: str):
-    pass # TODO
+def attempt_extract(extractors: dict, confidence: dict, in_file_path: str, out_file_path: str) -> bool:
+    highest_confidence = None
+    for identifier, conf in confidence.items():
+        if highest_confidence is None or conf[0] > highest_confidence[0]:
+            highest_confidence = conf
+
+    suspected_format = highest_confidence[1]
+
+    for _, info in extractors.items():
+        extractor_class = getattr(import_module(info['module']), info['attribute'])()
+        
+        if not extractor_class.is_supported(suspected_format):
+            continue
+
+        res = extractor_class.extract_file(in_file_path, out_file_path)
+        return res
 
 if __name__ == "__main__":
 
@@ -60,7 +74,14 @@ if __name__ == "__main__":
         confidence = attempt_identify(discovery.identifiers, args.infile)
         print(confidence)
     elif args.extract:
+        confidence = attempt_identify(discovery.identifiers, args.infile)
         print("Attempting to extract")
+        res = attempt_extract(discovery.extractors, confidence, args.infile, args.outfile)
+        if res:
+            print("Extraction succeeded")
+        else:
+            print("Extraction failed")
+
     
-    # room of expansion with more modes
+    # room for expansion with more modes
 

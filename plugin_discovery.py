@@ -3,7 +3,6 @@ plugin_discovery.py
 
 Searches installed packages for plugins
 """
-import identify
 from importlib.metadata import entry_points, EntryPoints, EntryPoint
 from importlib import import_module
 
@@ -81,8 +80,10 @@ class PluginDiscovery:
         
         return identifiers
 
-pd = PluginDiscovery()
-print(pd.list_extractors())
-print(pd.list_identifiers())
-print(pd.plugins)
+if __name__ == "__main__":
+
+    pd = PluginDiscovery()
+    print(pd.list_extractors())
+    print(pd.list_identifiers())
+    print(pd.plugins)
 
