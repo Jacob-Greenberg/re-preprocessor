@@ -16,8 +16,7 @@ A modular program to aid in file identification and decompression for reverse en
 
 ### Team Members
 
-- Jacob Greenberg
-    - Email greenbjg \[at\] mail.uc.edu
+- Jacob Greenberg (greenbjg \[at\] mail.uc.edu)
 - Gary S. (advisor)
 
 
@@ -67,9 +66,9 @@ entry_points = {
 1. In the plugin's root directory use `python3 -m build`
 2. Install the plugin's `.whl` from the `dist/*` directory created by the build 
 
-### Budget
+## Budget
 - At this time there have been no purchases towards this project
 - In the future licenses for IDA Pro or Binary Ninja might be required to properly integrate the preprocessor
 
-### Appendix
+## Appendix
 - Between in-class assignments and progress towards a minimum viable product the total contributed time this semester qis over 50 hours.
