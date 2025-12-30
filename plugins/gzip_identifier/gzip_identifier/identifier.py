@@ -21,5 +21,4 @@ class IdentifyGZip(Identifier):
             if magic_number != 0x8B1F: # Match magic bytes
                 return 0, SUPPORTED_FILE_TYPES
 
-
             return 1, SUPPORTED_FILE_TYPES

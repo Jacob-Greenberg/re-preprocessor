@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
 
-    name='zip',
+    name='padded_bitmap',
 
     version='0.0.1',
 
@@ -13,10 +13,10 @@ setup(
     install_requires=[],
     entry_points = {
         'repr-identifier': [
-            'identify-zip = zip.identifier:IdentifyZIP'
+            'identify-padded-bitmap = padded_bitmap.identifier:IdentifyZIP'
         ],
         'repr-extractor': [
-            'extract-zip =  zip.extractor:ExtractZIP'
+            'extract-padded-bitmap  =  padded_bitmap.extractor:ExtractZIP'
         ]
     }
 )
