@@ -25,13 +25,20 @@ def attempt_identify(identifiers: dict,
     if type_hint != None:
         pass # TODO
     else:
-        for identifier_name, info in identifiers.items():
-            identifier_class = getattr(import_module(info['module']), info['attribute'])()
-            confidence, types = identifier_class.identify_file(in_file_path)
-            confidence_values[identifier_name] = confidence, types
+       for identifier_name, info in identifiers.items():
+            try:
+                print(identifier_name)
+                identifier_class = getattr(import_module(info['module']), info['attribute'])()
+                confidence, types = identifier_class.identify_file(in_file_path)
+                confidence_values[identifier_name] = confidence, types
 
-            if confidence_threshold is not None and confidence >= confidence_threshold:
-                break
+                if confidence_threshold is not None and confidence >= confidence_threshold:
+                    break
+            except Exception as e:
+                print(f"Error during identification: {e}")
+                input("Press Enter to acknowledge")
+                confidence_values[identifier_name] = -1, [] # indicates an error state
+                continue # proceed to next identifier
 
     return confidence_values
 
@@ -71,6 +78,7 @@ if __name__ == "__main__":
 
     if args.identify:
         print("Attempting to identify")
+
         confidence = attempt_identify(discovery.identifiers, args.infile)
         print(confidence)
     elif args.extract:
