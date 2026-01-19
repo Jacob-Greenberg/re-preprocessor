@@ -13,10 +13,10 @@ setup(
     install_requires=[],
     entry_points = {
         'repr-identifier': [
-            'identify-gzip = gzip_identifier.identifier:IdentifyGZip'
+            'identify-tar = tar.identifier:IdentifyTar'
         ],
         'repr-extractor': [
-            'extract-gzip =  gzip_identifier.extractor:ExtractGZip'
+            'extract-tar =  tar.extractor:ExtractTar'
         ]
     }
 )

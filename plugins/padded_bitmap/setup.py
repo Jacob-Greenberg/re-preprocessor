@@ -13,10 +13,10 @@ setup(
     install_requires=[],
     entry_points = {
         'repr-identifier': [
-            'identify-padded-bitmap = padded_bitmap.identifier:IdentifyZIP'
+            'identify-padded-bitmap = padded_bitmap.identifier:IdentifyPaddedBitmap'
         ],
         'repr-extractor': [
-            'extract-padded-bitmap  =  padded_bitmap.extractor:ExtractZIP'
+            'extract-padded-bitmap  =  padded_bitmap.extractor:ExtractPaddedBitmap'
         ]
     }
 )

@@ -1,1 +1,1 @@
-SUPPORTED_FILE_TYPES = ["gzip", "gnuzip"]
+SUPPORTED_FILE_TYPES = ["tar"]

@@ -209,3 +209,4 @@ __marimo__/
 # DrawIO backup
 *.bkp
 .vscode
+test_files/padded.bmp
