@@ -1,6 +1,7 @@
 from repr_api.informational import Information
 from .config import SUPPORTED_FILE_TYPES
 import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
 import matplotlib.colors as mcolors
 import numpy as np
 import math
@@ -23,20 +24,22 @@ def calc_shannon_entropy(data: bytes) -> float:
 
     return -entropy
 
-def calc_scanning_entropy(data: bytes):
+def calc_scanning_entropy(data: bytes, block_size: int) -> list[float]:
     entropy_data = []
 
-    if len(data) < 256:
-        bin_width = 8
-    else:
-        bin_width = 256
-
-    for i in range(0, len(data), bin_width):
-        block = data[i:i + bin_width]
+    for i in range(0, len(data), block_size):
+        block = data[i:i + block_size]
         entropy_data.append(calc_shannon_entropy(block))
-    print(len(entropy_data))
-    return entropy_data, bin_width
+
+    return entropy_data
+
+def byte_distribution(data: bytes) -> list[int]:
+    distribution = [0] * 256
+
+    for byte in data:
+        distribution[byte] = distribution[byte] + 1
     
+    return distribution
 
 class EntropyInformation(Information):
     def show_info(self, file_path: str) -> None:
@@ -47,20 +50,11 @@ class EntropyInformation(Information):
                 raise ValueError("File is empty, cannot compute entropy.")
 
             entropy = calc_shannon_entropy(data)
-            entropy_data, bin_width = calc_scanning_entropy(data)
+            entropy_data = calc_scanning_entropy(data, block_size = 1024)
+            dist = byte_distribution(data)
 
-        fig, (ax_hist, ax_bar) = plt.subplots(2, 1, figsize=(10, 5), gridspec_kw={'height_ratios': [4, 1]})
+        fig, (ax_block, ax_dist, ax_overall) = plt.subplots(3, 1, figsize=(10, 5), gridspec_kw={'height_ratios': [4, 4, 1]})
         plt.subplots_adjust(hspace=0.1)
-
-
-        # TODO: this is supposed to be a histogram visualization, but it dont look good
-        ax_hist.hist(entropy_data, bins=bin_width, color='#3498db', alpha=0.8)
-        ax_hist.set_title('Byte Distribution & Shannon Entropy', fontsize=14, pad=15)
-        ax_hist.set_ylabel('Byte Frequency')
-        ax_hist.set_xlabel('Byte Value (0-255)')
-        ax_hist.grid(axis='y', linestyle='--', alpha=0.4)
-        ax_hist.set_xlim(0, bin_width)
-
 
 
         # Shannon entropy visualization
@@ -68,16 +62,35 @@ class EntropyInformation(Information):
         cmap = mcolors.LinearSegmentedColormap.from_list("entropy_cmap", colors)
         gradient = np.linspace(0, 1, 256).reshape(1, -1)
 
-        ax_bar.imshow(gradient, aspect='auto', cmap=cmap, extent=[0, 8, 0, 1], alpha=0.3)
-        ax_bar.axvspan(3.5, 5, color='green', alpha=0.15, label='English Text (3.5-5.0)') # english text is usually 3.5-5
-        ax_bar.axvspan(7.5, 8, color='red', alpha=0.15, label='Compressed/Encrypted (7.5-8.0)') # anything over 7.5 is usually compressed
-        ax_bar.axvline(entropy, color='black', linewidth=3, label=f'File Entropy: {entropy:.2f}')
+        # entropy of 1k blocks
+        ax_block.plot(range(len(entropy_data)),entropy_data)
+        ax_block.set_title('Shannon Entropy per Block')
+        ax_block.set_ylabel('Entropy (0-8)')
+        ax_block.set_xlabel('Block #')
+        ax_block.axhspan(3.5, 5.0, color='green', alpha=0.2, label='English Text')
+        ax_block.axhspan(7.5, 8.0, color='red', alpha=0.2, label='Encrypted/Compressed')
+        ax_block.grid(axis='y', linestyle='--', alpha=0.4)
+        #ax_block.imshow(block_grad, aspect='auto', cmap=cmap, extent=[0, 1, 0, 8], alpha=0.3) # couldn't get this to work but it would look nice
 
-        ax_bar.set_xlim(0, 8)
-        ax_bar.set_ylim(0, 1)
-        ax_bar.set_yticks([]) # remove y ticks
-        ax_bar.set_xlabel('Bits per byte')
-        ax_bar.set_title('Shannon Entropy')
-        ax_bar.legend(loc='upper left', bbox_to_anchor=(1, 1))
+        # byte distribution graph
+        ax_dist.bar(range(256), dist)
+        ax_dist.set_title('Byte Distribution')
+        ax_dist.set_ylabel('Number of Occurrences')
+        ax_dist.set_xlabel('Byte (0x0-0xff)')
+        ax_dist.xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, pos: f'0x{int(x):02X}'))
+        ax_dist.grid(axis='y', linestyle='--', alpha=0.4)
+
+        # overall entropy
+        ax_overall.imshow(gradient, aspect='auto', cmap=cmap, extent=[0, 8, 0, 1], alpha=0.3)
+        ax_overall.axvspan(3.5, 5, color='green', alpha=0.15, label='English Text (3.5-5.0)') # english text is usually 3.5-5
+        ax_overall.axvspan(7.5, 8, color='red', alpha=0.15, label='Compressed/Encrypted (7.5-8.0)') # anything over 7.5 is usually compressed
+        ax_overall.axvline(entropy, color='black', linewidth=3, label=f'File Entropy: {entropy:.2f}')
+
+        ax_overall.set_xlim(0, 8)
+        ax_overall.set_ylim(0, 1)
+        ax_overall.set_yticks([]) # remove y ticks
+        ax_overall.set_title('Overall Shannon Entropy')
+        ax_overall.legend(bbox_to_anchor=(1, 1))
+        
         plt.tight_layout()
         plt.show()
