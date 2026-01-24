@@ -42,6 +42,8 @@ def attempt_identify(identifiers: dict,
 
     return confidence_values
 
+
+
 def attempt_extract(extractors: dict, confidence: dict, in_file_path: str, out_file_path: str) -> bool:
     highest_confidence = None
     for identifier, conf in confidence.items():
@@ -92,6 +94,21 @@ if __name__ == "__main__":
         print("Attempting to identify")
 
         confidence = attempt_identify(discovery.identifiers, args.infile)
+        for key, value in confidence.items():
+            if value[0] > 0.5:
+                break
+        else:
+            print("[ ? ] No high confidence identification")
+            for info_name, info in discovery.informational.items():
+                try:
+                    print(info_name)
+                    info_class = getattr(import_module(info['module']), info['attribute'])()
+                    info_class.show_info(args.infile)
+                except Exception as e:
+                    print(f"Error during information extraction: {e}")
+                    input("Press Enter to acknowledge")
+                continue # proceed to next informational plugin
+                
         print(confidence)
     elif args.extract:
         confidence = attempt_identify(discovery.identifiers, args.infile)
