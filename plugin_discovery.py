@@ -8,7 +8,7 @@ from importlib import import_module
 
 
 class PluginDiscovery:
-    def __init__(self, plugin_groups: list[str] = ["repr-plugin", "repr-extractor", "repr-identifier"]):
+    def __init__(self, plugin_groups: list[str] = ["repr-plugin", "repr-extractor", "repr-identifier", "repr-info"]):
         """
         :plugin_groups: a list of strings for entry-point groups which should be considered plugins
                         `repr-extractor` and `repr-identifier` are required
@@ -16,6 +16,7 @@ class PluginDiscovery:
         self.plugin_groups = plugin_groups
         self.extractors = {}
         self.identifiers = {}
+        self.informational = {}
         self.plugins = self.discover_plugins()
 
     def discover_plugins(self):
@@ -44,6 +45,12 @@ class PluginDiscovery:
                     }
                 elif group == 'repr-identifier':
                         self.identifiers[ep.name] = {
+                        "group":     group,
+                        "module":    ep.module,
+                        "attribute": ep.attr
+                    }
+                elif group == 'repr-info':
+                     self.informational[ep.name] = {
                         "group":     group,
                         "module":    ep.module,
                         "attribute": ep.attr
@@ -80,10 +87,23 @@ class PluginDiscovery:
         
         return identifiers
 
+    def list_informational(self):
+        """
+        Returns a list of available informational plugins
+        """
+        informational = []
+            
+        for key, value in self.plugins.items():
+            if value['group'] == 'repr-info':
+                informational.append(key)
+        
+        return informational
+
 if __name__ == "__main__":
 
     pd = PluginDiscovery()
     print(pd.list_extractors())
     print(pd.list_identifiers())
+    print(pd.list_informational())
     print(pd.plugins)
 
