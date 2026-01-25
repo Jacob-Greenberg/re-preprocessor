@@ -24,6 +24,22 @@ A modular program to aid in file identification and decompression for reverse en
 
 Software reverse engineers often encounter unusual file formats in their line of work. This tools seeks to provide a modular way to identify and extract those bespoke files.
 
+### Usage
+
+> [!WARNING]  
+> These steps are likely to change in the future
+
+0. Clone the repo
+1. In the root project directory, create a Python virtual environment with `python3 -m venv venv`. You'll need to use your venv for the following steps.
+2. Using the virtual environment, install the required Python packages with `pip install -r requirements.txt`
+3. Install the REPr API with `cd ./api` and `pip install -e .`
+4. Install any plugins you'd like to have with `cd ./plugins` and `pip install -e ./<plugin name>/`
+5. Run the program with `python3 main.py --help`
+
+Example usage:
+`python3 main.py --identify --infile ./test_files/plain.txt.zip`
+`python3 main.py --information --infile ./test_files/archive_plain.tar`
+`python3 main.py --extract --infile ./test_files/plain.txt.gz --outfile /tmp/plain.txt.gz.out`
 
 ### Setting up a Development Environment
 
