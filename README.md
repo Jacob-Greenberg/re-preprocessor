@@ -15,7 +15,7 @@ A modular program to aid in file identification and decompression for reverse en
 - [Appendix](#appendix)
 
 ### Installation, Usage, and More!
-** Head on over to the wiki: ** [Wiki Home](https://github.com/Jacob-Greenberg/re-preprocessor/wiki)
+**Head on over to the wiki:** [Wiki Home](https://github.com/Jacob-Greenberg/re-preprocessor/wiki)
 
 ### Team Members
 
