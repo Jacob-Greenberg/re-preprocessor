@@ -43,7 +43,6 @@ def attempt_identify(identifiers: dict,
     return confidence_values
 
 
-
 def attempt_extract(extractors: dict, confidence: dict, in_file_path: str, out_file_path: str) -> bool:
     highest_confidence = None
     for identifier, conf in confidence.items():
@@ -60,6 +59,31 @@ def attempt_extract(extractors: dict, confidence: dict, in_file_path: str, out_f
 
         res = extractor_class.extract_file(in_file_path, out_file_path)
         return res
+
+def check_information(informational_plugins: dict, in_file_path: str):
+    plugin_references = []
+    for i, (plugin_name, info) in enumerate(informational_plugins.items()):
+        plugin_references.append(info)
+        print(f"[{i + 1}] {plugin_name}")
+
+    try:
+        selection = int(input("Select an informational tool: ")) - 1
+    except ValueError:
+        print("[ ! ] Selection must be a number")
+        quit(1)            
+            
+    try:
+        info_class = getattr(import_module(plugin_references[selection]['module']), plugin_references[selection]['attribute'])()
+    except IndexError:
+        print("[ ! ] Invalid selection")
+        quit(1)
+            
+    try:
+        info_class.show_info(args.infile)
+    except Exception as e:
+        print(f"[ ! ] Encountered an error during plugin execution: {e}")
+        quit(1)
+
 
 if __name__ == "__main__":
 
@@ -80,15 +104,7 @@ if __name__ == "__main__":
     print(f"[...] Found {len(discovery.extractors)} extractors and {len(discovery.identifiers)} identifiers")
 
     if args.information:
-        for info_name, info in discovery.informational.items():
-            try:
-                print(info_name)
-                info_class = getattr(import_module(info['module']), info['attribute'])()
-                info_class.show_info(args.infile)
-            except Exception as e:
-                print(f"Error during information extraction: {e}")
-                input("Press Enter to acknowledge")
-                continue # proceed to next informational plugin
+        check_information(discovery.informational, args.infile)
 
     elif args.identify:
         print("Attempting to identify")
@@ -98,18 +114,11 @@ if __name__ == "__main__":
             if value[0] > 0.5:
                 break
         else:
+            print(confidence)
             print("[ ? ] No high confidence identification")
-            for info_name, info in discovery.informational.items():
-                try:
-                    print(info_name)
-                    info_class = getattr(import_module(info['module']), info['attribute'])()
-                    info_class.show_info(args.infile)
-                except Exception as e:
-                    print(f"Error during information extraction: {e}")
-                    input("Press Enter to acknowledge")
-                continue # proceed to next informational plugin
-                
-        print(confidence)
+            print("Additional information may be availible:")
+            check_information(discovery.informational, args.infile)
+
     elif args.extract:
         confidence = attempt_identify(discovery.identifiers, args.infile)
         print("Attempting to extract")
@@ -118,6 +127,7 @@ if __name__ == "__main__":
             print("Extraction succeeded")
         else:
             print("Extraction failed")
+            quit(1)
 
     
     # room for expansion with more modes

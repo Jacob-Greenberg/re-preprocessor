@@ -43,7 +43,6 @@ def byte_distribution(data: bytes) -> list[int]:
 
 class EntropyInformation(Information):
     def show_info(self, file_path: str) -> None:
-        print("Showing entropy information for file:", file_path)
         with open(file_path, "rb") as f:
             data = f.read()
             if not data:
