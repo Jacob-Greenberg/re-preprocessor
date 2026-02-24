@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
 
-    name='tar',
+    name='pcap-identifier',
 
     version='0.0.1',
 
@@ -13,10 +13,10 @@ setup(
     install_requires=[],
     entry_points = {
         'repr-identifier': [
-            'identify-tar = tar.identifier:IdentifyTar'
+            'identify-pcap = pcap.identifier:IdentifyPCAP'
         ],
         'repr-extractor': [
-            'extract-tar =  tar.extractor:ExtractTar'
+            'extract-pcap =  pcap.extractor:ExtractPCAP'
         ]
     }
 )
