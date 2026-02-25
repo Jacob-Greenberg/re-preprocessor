@@ -110,11 +110,12 @@ if __name__ == "__main__":
         print("Attempting to identify")
 
         confidence = attempt_identify(discovery.identifiers, args.infile)
+
+        print(confidence)
         for key, value in confidence.items():
             if value[0] > 0.5:
                 break
         else:
-            print(confidence)
             print("[ ? ] No high confidence identification")
             print("Additional information may be availible:")
             check_information(discovery.informational, args.infile)
