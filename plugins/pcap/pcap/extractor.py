@@ -31,11 +31,7 @@ class ExtractPCAP(Extractor):
                     else:
                         f.write(b''.join(payload))
 
-
-                #print(f"{src_ip}:{src_port} -> {dst_ip}:{dst_port}")
-                #print(f"{src_ip}:{src_port} -> {dst_ip}:{dst_port} | {payload}")
-                print(datagram)
-                #print(f"{counter}************************************************")
+            print(f"Reassembled {counter} TCP conversations in {dest_path}")
             return True
         except Exception as e:
             print(e)
