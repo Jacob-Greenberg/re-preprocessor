@@ -10,7 +10,7 @@ setup(
 
     packages=find_packages(),
 
-    install_requires=[],
+    install_requires=['pypcapkit', 'dpkt'],
     entry_points = {
         'repr-identifier': [
             'identify-pcap = pcap.identifier:IdentifyPCAP'
