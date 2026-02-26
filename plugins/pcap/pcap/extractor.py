@@ -13,7 +13,7 @@ class ExtractPCAP(Extractor):
                 reassembly=True,
                 tcp=True
                 )
-            print("here")
+
             counter = 0
             for datagram in ext.reassembly.tcp:
                 
