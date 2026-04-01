@@ -5,18 +5,27 @@ import struct
 
 class IdentifyTar(Identifier):
     def identify_file(self, file_path: str) -> tuple[float, list[str]]:
-        # check for tar magic bytes at offset 257
-        with open(file_path, "rb") as f:
-            try:
-                f.seek(257)
-            except:
-                return 0, SUPPORTED_FILE_TYPES
-            raw_header = f.read(5)
-            header = struct.unpack_from('5s',raw_header)
+        try:
+            with open(file_path, "rb") as f:
+                f.seek(0, 2)
+                file_size = f.tell()
+
+                if file_size < 262:
+                    return 0, SUPPORTED_FILE_TYPES
             
-            magic_bytes = header[0]
+                f.seek(257)
+                magic_bytes = f.read(5)
 
-            if magic_bytes != b'ustar': # Match magic bytes
-                return 0, SUPPORTED_FILE_TYPES
+                if len(magic_bytes) != 5 or magic_bytes != b'ustar':
+                    return 0, SUPPORTED_FILE_TYPES
+            
+                f.seek(148)
+                checksum = f.read(8)
+                if len(checksum) != 8:
+                    return 0, SUPPORTED_FILE_TYPES
 
-            return 1, SUPPORTED_FILE_TYPES
+                return 1, SUPPORTED_FILE_TYPES
+        
+        except (IOError, OSError) as e:
+            print(e)
+            return 0, SUPPORTED_FILE_TYPES
