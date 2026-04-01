@@ -8,6 +8,10 @@ class ExtractEdge(Extractor):
         try:
             image = Image.open(source_path)
             width, height = image.size
+
+            if width * height > 1920 * 1080:
+                print("[...] Large image loaded, this may take a moment...")
+
             #greyscale = image.convert("L") # later iterations might include different views
             rgb = image.convert("RGB")
 
